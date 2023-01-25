@@ -1,0 +1,14 @@
+{
+  "name": "news-homepage",
+  "version": "1.0.0",
+  "description": "This is a solution to the News homepage challenge on Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "author": "Mateus Belício",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
