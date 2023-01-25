@@ -2,59 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Challenge by Frontend Mentor. Coded by Mateus Belício.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="container">
+  <header class="header">
+    <div class="header__logo"><img src="assets/images/logo.svg" alt="Logo"></div>
+    
+    <button class="btn btn--menu" aria-controls="nav" aria-selected="false">
+      <span>Menu</span>
+    </button>
+    <nav id="nav" class="header__navigation">
+      <ul class="header__list">
+        <li><a href="#" class="header__link">Home</a></li>
+        <li><a href="#" class="header__link">New</a></li>
+        <li><a href="#" class="header__link">Popular</a></li>
+        <li><a href="#" class="header__link">Trending</a></li>
+        <li><a href="#" class="header__link">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+  <main class="home grid-container">
+    <div class="hero home__section-hero">
+      <picture class="hero__img">
+        <source srcset="assets/images/image-web-3-desktop.jpg" media="(min-width: 50em)">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="" aria-hidden="true">
+      </picture>
+      <h1 class="hero__title h1">The Bright Future of Web 3.0?</h1>
+      <p class="hero__text">
+        We dive into the next evolution of the web that claims to put the power of the 
+        platforms back into the hands of the people. But is it really fulfilling its promise?
+      </p>
+      <a href="#" class="hero__btn btn btn--cta">Read more</a>
+    </div>
 
-  The Bright Future of Web 3.0?
+    <section class="new home__section-new">
+      <h2 class="new__title h2">New</h2>
+      <ul class="new__list">
+        <li class="new__item">
+          <a href="#" class="new__link">Hydrogen VS Electric Cars</a>
+          <p class="new__text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </li>
+        <li class="new__item">
+          <a href="#" class="new__link">The Downsides of AI Artistry</a>
+          <p class="new__text">What are the possible adverse effects of on-demand AI image generation?</p>
+        </li>
+        <li class="new__item">
+          <a href="#" class="new__link">Is VC Funding Drying Up?</a>
+          <p class="new__text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </li>
+      </ul>
+    </section>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="posts home__section-posts">
+      <h2 class="posts__title visually-hidden">Top posts</h2>
+      <ul class="posts__list">
+        <li class="posts__item">
+          <a href="#" class="posts__link">Reviving Retro PCs</a>
+          <p class="posts__text">What happens when old PCs are given modern upgrades?</p>
+        </li>
+        <li class="posts__item">
+          <a href="#" class="posts__link">Top 10 Laptops of 2022</a>
+          <p class="posts__text">Our best picks for various needs and budgets.</p>
+        </li>
+        <li class="posts__item">
+          <a href="#" class="posts__link">The Growth of Gaming</a>
+          <p class="posts__text">How the pandemic has sparked fresh opportunities.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
