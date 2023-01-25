@@ -27,13 +27,13 @@
 }
 
 .grid-container {
-  $num-grid: 8;
+  $num-grid: 12;
 
   display: grid;
   grid-template-columns:
-    1fr
-    repeat([center-start] $num-grid, minmax(0, calc($max-width / $num-grid)) [center-end])
-    1fr;
+    [full-start]
+    repeat($num-grid, [col-start] minmax(0, calc($max-width / $num-grid)) [col-end])
+    [full-end];
 }
 
 /**

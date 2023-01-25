@@ -3,3 +3,24 @@
 // -----------------------------------------------------------------------------
 
 @use '../abstracts/' as *;
+
+.home {
+  row-gap: to-rem(24);
+
+  & > * {
+    grid-column: full;
+  }
+
+  @include breakpoint(800) {
+    column-gap: to-rem(24);
+
+    &__section-hero {
+      // grid-column: 1 / span 8;
+      grid-column: full-start / col-end 8;
+    }
+
+    &__section-new {
+      grid-column: col-start -4 / full-end;
+    }
+  }
+}

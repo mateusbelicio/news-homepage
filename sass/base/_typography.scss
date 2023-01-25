@@ -8,18 +8,21 @@ body {
   font-size: to-rem(15);
   font-family: $ff-primary;
   color: clr('neutral');
+  background-color: clr('neutral', 200);
+  line-height: 1.7;
 }
 
 .h1 {
-  font-size: minmax-font(24, 52);
+  font-size: minmax-font(38, 52);
   font-weight: 800;
   color: clr('neutral', 500);
+  line-height: 1.1;
 }
 
 .h2 {
   font-size: to-rem(24);
   font-weight: 700;
-  color: clr('neutral', 100);
+  color: clr('primary', 300);
 }
 
 .h3 {

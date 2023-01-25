@@ -3,3 +3,103 @@
 // -----------------------------------------------------------------------------
 
 @use '../abstracts/' as *;
+@use '../base/' as *;
+
+%btn-bar {
+  display: block;
+  height: to-rem(3);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+
+  &--cta {
+    background-color: clr('primary');
+    color: clr('neutral', 200);
+    padding: to-rem(12) to-rem(32);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.48px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: clr('neutral', 500);
+    }
+  }
+
+  &--menu {
+    height: to-rem(17);
+    width: to-rem(40);
+    aspect-ratio: 1;
+    font-size: to-rem(1);
+
+    color: transparent;
+    background-color: currentColor;
+    padding: 0;
+    position: relative;
+    z-index: z('above');
+
+    @include breakpoint(600) {
+      display: none;
+    }
+
+    span {
+      background-color: clr('neutral', 500);
+      transform: translateY(-50%);
+      top: 50%;
+      transition: background-color 0s 0.4s;
+
+      @extend %btn-bar;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: clr('neutral', 500);
+      transform-origin: center;
+
+      @extend %btn-bar;
+    }
+
+    &::before {
+      top: 0;
+      transition: top 0.2s 0.4s, transform 0.4s;
+    }
+
+    &::after {
+      bottom: 0;
+      transition: bottom 0.2s 0.4s, transform 0.4s;
+    }
+  }
+
+  &--menu[aria-selected='true'] {
+    $padding-inline: to-rem(24);
+
+    position: fixed;
+    right: $padding-inline;
+
+    span {
+      background-color: transparent;
+      opacity: 50%;
+      transition: background-color 0.2s;
+    }
+
+    &::before {
+      top: calc(50% - to-rem(3) / 2);
+      transform: rotate(135deg);
+      transition: top 0.2s, transform 0.4s 0.2s;
+    }
+
+    &::after {
+      bottom: calc(50% - to-rem(3) / 2);
+      transform: rotate(-135deg);
+      transition: bottom 0.2s, transform 0.4s 0.2s;
+    }
+  }
+}

@@ -2,6 +2,8 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 
+@use 'variables' as *;
+
 /// Returns a variable of the color based on name color and shade
 /// @access public
 /// @param {String} $color - color name (e.g. 'primary', 'accent'...)
