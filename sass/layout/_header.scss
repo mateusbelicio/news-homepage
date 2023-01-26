@@ -8,10 +8,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: to-rem(48);
+  padding-block: to-rem(28) to-rem(32);
+
+  @include breakpoint(800) {
+    padding-block: to-rem(90) to-rem(55);
+  }
 
   & > * {
     flex-shrink: 0;
+  }
+
+  &__logo {
+    height: to-rem(28);
+
+    @include breakpoint(800) {
+      height: to-rem(40);
+    }
+
+    & > * {
+      height: 100%;
+    }
   }
 
   &__navigation {
@@ -51,12 +67,12 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin-top: 20vh;
+    margin-top: to-rem(132);
     padding: 0;
 
     @include breakpoint(600) {
       flex-direction: row;
-      gap: to-rem(32);
+      gap: to-rem(38);
       margin: 0;
     }
   }
@@ -66,8 +82,9 @@
     width: 100%;
     text-decoration: none;
     color: clr('neutral', 500);
-    font-size: to-rem(20);
-    padding: to-rem(16) to-rem(32);
+    font-size: to-rem(18);
+    padding: to-rem(15) to-rem(24);
+    line-height: 1;
 
     @include breakpoint(600) {
       font-size: to-rem(16);
