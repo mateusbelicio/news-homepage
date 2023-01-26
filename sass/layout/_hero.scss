@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the hero section of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.hero {
+  display: grid;
+  gap: to-rem(24);
+  place-items: start;
+
+  @include breakpoint(600) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(800) {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+  }
+
+  @include breakpoint(1000) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: to-rem(32);
+  }
+
+  &__title {
+    @include breakpoint(600) {
+      grid-row: span 2;
+    }
+
+    @include breakpoint(800) {
+      grid-row: auto;
+    }
+
+    @include breakpoint(1000) {
+      grid-row: span 2;
+    }
+  }
+
+  &__img {
+    max-height: 50vh;
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint(600) {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint(800) {
+      max-height: none;
+      height: 100%;
+    }
+
+    & > * {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -5,17 +5,17 @@
 @use '../abstracts/' as *;
 
 .home {
-  row-gap: to-rem(24);
+  row-gap: to-rem(64);
 
   & > * {
     grid-column: full;
   }
 
   @include breakpoint(800) {
-    column-gap: to-rem(24);
+    column-gap: to-rem(30);
+    row-gap: to-rem(72);
 
     &__section-hero {
-      // grid-column: 1 / span 8;
       grid-column: full-start / col-end 8;
     }
 

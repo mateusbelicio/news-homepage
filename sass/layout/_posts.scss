@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the top posts section of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.posts {
+  padding-block-end: to-rem(80);
+
+  @include breakpoint(800) {
+    padding-block-end: to-rem(130);
+  }
+
+  &__list {
+    display: grid;
+    gap: to-rem(24);
+
+    & > * {
+      flex-shrink: 1;
+      flex-grow: 0;
+      flex-basis: 33.33%;
+    }
+
+    @include breakpoint(800) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

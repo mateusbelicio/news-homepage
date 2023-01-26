@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the news list of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.new {
+  color: clr('neutral', 300);
+  background-color: clr('neutral', 500);
+  padding: to-rem(24) to-rem(20);
+
+  @include breakpoint(600) {
+    padding: to-rem(30) to-rem(24);
+  }
+
+  &__title {
+    margin-block-end: to-rem(30);
+  }
+
+  &__item {
+    list-style: none;
+
+    &:not(:first-child) {
+      margin-block-start: to-rem(30);
+      padding-block-start: to-rem(28);
+      border-block-start: 1px solid clr('neutral');
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: clr('neutral', 100);
+    text-decoration: none;
+    font-size: to-rem(20);
+    font-weight: 700;
+    margin-block-end: to-rem(8);
+    line-height: 1.4;
+    transition: color 0.2s;
+
+    &:hover {
+      color: clr('primary', 300);
+    }
+  }
+}

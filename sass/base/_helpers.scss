@@ -20,7 +20,7 @@
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  $padding-inline: to-rem(24);
+  $padding-inline: to-rem(16);
 
   width: min($max-width, calc(100% - 2 * $padding-inline));
   margin-inline: auto;

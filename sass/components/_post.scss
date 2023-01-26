@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the post component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.post {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: to-rem(10);
+  column-gap: to-rem(24);
+  list-style: none;
+
+  counter-increment: number;
+
+  &__img {
+    grid-row: span 2;
+    height: 100%;
+    width: to-rem(100);
+    object-fit: cover;
+  }
+
+  &__link {
+    font-size: to-rem(18);
+    font-weight: 700;
+    color: clr('neutral', 500);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: clr('primary');
+    }
+
+    &::before {
+      content: '0' counter(number);
+      display: block;
+      font-size: to-rem(32);
+      line-height: 1;
+      font-weight: 700;
+      color: clr('neutral', 300);
+      margin-block-end: to-rem(10);
+    }
+  }
+}
