@@ -4,17 +4,17 @@ const menuButton = document.querySelector('.btn--menu');
 const menuNavigation = document.querySelector('.header__navigation');
 
 const toggleMenu = () => {
-  menuButton.getAttribute('aria-selected') === 'true'
-    ? menuButton.setAttribute('aria-selected', false)
-    : menuButton.setAttribute('aria-selected', true);
+  menuButton.dataset.checked === 'true'
+    ? menuButton.setAttribute('data-checked', false)
+    : menuButton.setAttribute('data-checked', true);
 };
 
 menuButton.addEventListener('click', toggleMenu);
 menuNavigation.addEventListener('click', (e) => {
   if (!e.target.closest('.header__link')) return;
-  menuButton.setAttribute('aria-selected', false);
+  menuButton.setAttribute('data-checked', false);
 });
 
 window.addEventListener('keydown', (e) => {
-  e.key === 'Escape' && menuButton.setAttribute('aria-selected', false);
+  e.key === 'Escape' && menuButton.setAttribute('data-checked', false);
 });

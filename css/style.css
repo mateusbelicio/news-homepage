@@ -538,11 +538,11 @@ h5 {
   color: var(--clr-primary-400);
 }
 
-.btn--menu[aria-selected=false] + .header__navigation {
+.btn--menu[data-checked=false] + .header__navigation {
   transform: translateX(100%);
 }
 @media only screen and (min-width: 37.5em) {
-  .btn--menu[aria-selected=false] + .header__navigation {
+  .btn--menu[data-checked=false] + .header__navigation {
     transform: translateX(0);
     transition: none;
   }
@@ -728,21 +728,21 @@ h5 {
   bottom: 0;
   transition: bottom 0.2s 0.4s, transform 0.4s;
 }
-.btn--menu[aria-selected=true] {
+.btn--menu[data-checked=true] {
   position: fixed;
   right: 1rem;
 }
-.btn--menu[aria-selected=true] span {
+.btn--menu[data-checked=true] span {
   background-color: transparent;
   opacity: 50%;
   transition: background-color 0.2s;
 }
-.btn--menu[aria-selected=true]::before {
+.btn--menu[data-checked=true]::before {
   top: calc(50% - 0.1875rem / 2);
   transform: rotate(135deg);
   transition: top 0.2s, transform 0.4s 0.2s;
 }
-.btn--menu[aria-selected=true]::after {
+.btn--menu[data-checked=true]::after {
   bottom: calc(50% - 0.1875rem / 2);
   transform: rotate(-135deg);
   transition: bottom 0.2s, transform 0.4s 0.2s;

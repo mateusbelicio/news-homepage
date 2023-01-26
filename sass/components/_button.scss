@@ -80,7 +80,7 @@
     }
   }
 
-  &--menu[aria-selected='true'] {
+  &--menu[data-checked='true'] {
     $padding-inline: to-rem(16);
 
     position: fixed;

@@ -16,10 +16,10 @@
   <header class="header">
     <div class="header__logo"><img src="assets/images/logo.svg" alt="Logo"></div>
     
-    <button class="btn btn--menu" aria-controls="nav" aria-selected="false">
+    <button id="menu-button" class="btn btn--menu" aria-controls="nav" aria-haspopup="true" data-checked="false" >
       <span>Menu</span>
     </button>
-    <nav id="nav" class="header__navigation">
+    <nav id="nav" class="header__navigation" aria-labelledby="menu-button">
       <ul class="header__list">
         <li><a href="#" class="header__link">Home</a></li>
         <li><a href="#" class="header__link">New</a></li>
@@ -66,17 +66,17 @@
       <h2 class="posts__title visually-hidden">Top posts</h2>
       <ul class="posts__list">
         <li class="post">
-          <img src="assets/images/image-retro-pcs.jpg" alt="" class="post__img">
+          <img src="assets/images/image-retro-pcs.jpg" alt="Old electronics and PCs that look like new" class="post__img">
           <a href="#" class="post__link">Reviving Retro PCs</a>
           <p class="post__text">What happens when old PCs are given modern upgrades?</p>
         </li>
         <li class="post">
-          <img src="assets/images/image-top-laptops.jpg" alt="" class="post__img">
+          <img src="assets/images/image-top-laptops.jpg" alt="Keys of a keyboard" class="post__img">
           <a href="#" class="post__link">Top 10 Laptops of 2022</a>
           <p class="post__text">Our best picks for various needs and budgets.</p>
         </li>
         <li class="post">
-          <img src="assets/images/image-gaming-growth.jpg" alt="" class="post__img">
+          <img src="assets/images/image-gaming-growth.jpg" alt="A gamepad over a person's hand, as if floating" class="post__img">
           <a href="#" class="post__link">The Growth of Gaming</a>
           <p class="post__text">How the pandemic has sparked fresh opportunities.</p>
         </li>

@@ -99,7 +99,7 @@
   }
 }
 
-.btn--menu[aria-selected='false'] + .header__navigation {
+.btn--menu[data-checked='false'] + .header__navigation {
   transform: translateX(100%);
 
   @include breakpoint(600) {
